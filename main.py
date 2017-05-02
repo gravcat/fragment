@@ -7,9 +7,11 @@ parser.add_argument('--address',
                     dest='miner_address',
                     default='760dF3ddF5A41Cb67867C4CE01Ad327cBaC2cf99',
                     help='Supply mining address')
-parser.add_argument('--pool',
+requiredGroup = parser.add_argument_group('required arguments')
+requiredGroup.add_argument('--pool',
                     choices=['ethpool','ethermine'],
-                    help='Mining pool to pull statistics from.')
+                    help='Mining pool to pull statistics from.',
+                    required=True)
 args = parser.parse_args()
 
 # retrieve data from ethpool/ethermine API
