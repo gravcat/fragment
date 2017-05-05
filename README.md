@@ -12,6 +12,8 @@ optional arguments:
   -h, --help            show this help message and exit
   --address MINER_ADDRESS
                         Supply mining address
+
+required arguments:
   --pool {ethpool,ethermine}
                         Mining pool to pull statistics from.
 ```
